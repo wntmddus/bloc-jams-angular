@@ -33,15 +33,19 @@
          Fixtures.getAlbum = function() {
             return albumPicasso;
          };
-         return Fixtures;
-     }
-    function getCollection(numberOfAlbums) {
-        this.albums = [];
-        for (var i=0; i < numberOfAlbums; i++) {
-            this.albums.push(Fixtures.getAlbum());
+    return {
+        getAlbum: function() {
+            return albumPicasso;
+        },
+        getCollection: function(numberOfAlbums) {
+            this.albums = [];
+            for (var i=0; i < numberOfAlbums; i++) {
+                this.albums.push(Fixtures.getAlbum());
+            }
+            return this.albums;
         }
-        return this.albums;
-    }
+     } 
+     }
  
      angular
          .module('blocJams')
