@@ -22,7 +22,7 @@
              <h2 class="song-name">{{ playerBar.songPlayer.currentSong.title }}</h2>
              <h2 class="artist-song-mobile"></h2>
              <h3 class="artist-name"></h3>
-             <seek-bar value="{{ playerBar.songPlayer.currentTime }}" max="{{ playerBar.songPlayer.currentSong.duration }}" on-change="playerBar.songPlayer.setCurrentTime(value)"></seek-bar>
+             <seek-bar value="{{ playerBar.songPlayer.currentTime | timecode }}" max="{{ playerBar.songPlayer.currentSong.duration | timecode}}" on-change="playerBar.songPlayer.setCurrentTime(value)"></seek-bar>
          </div>
          <div class="control-group volume">
              <span class="icon ion-volume-high"></span>
